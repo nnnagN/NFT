@@ -1,0 +1,107 @@
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1440px;
+
+// Media
+@mixin m($size, $val: null, $val2: null) {
+
+  // min-width
+  @if $size == xxl {
+    @media only screen and (min-width: $xxl) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media only screen and (min-width: $xl) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $size == md {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $size == xs {
+    @media only screen and (min-width: $xs) {
+      @content;
+    }
+
+    // max-width
+  } @else if $size == max_xxs {
+    @media only screen and (max-width: $xs - 1px) {
+      @content;
+    }
+  } @else if $size == max_xs {
+    @media only screen and (max-width: $sm - 1px) {
+      @content;
+    }
+  } @else if $size == max_sm {
+    @media only screen and (max-width: $md - 1px) {
+      @content;
+    }
+  } @else if $size == max_md {
+    @media only screen and (max-width: $lg - 1px) {
+      @content;
+    }
+  } @else if $size == max_lg {
+    @media only screen and (max-width: $xl - 1px) {
+      @content;
+    }
+  } @else if $size == max_xl {
+    @media only screen and (max-width: $xxl - 1px) {
+      @content;
+    }
+
+    // other width
+  } @else if $size == min_w {
+    @media only screen and (min-width: $val) {
+      @content;
+    }
+  } @else if $size == max_w {
+    @media only screen and (max-width: $val) {
+      @content;
+    }
+  } @else if $size == min_max_w {
+    @media only screen and (min-width: $val) and (max-width: $val2) {
+      @content;
+    }
+
+    // other height
+  } @else if $size == min_h {
+    @media only screen and (min-height: $val) {
+      @content;
+    }
+  } @else if $size == max_h {
+    @media only screen and (max-height: $val) {
+      @content;
+    }
+  } @else if $size == min_max_h {
+    @media only screen and (min-height: $val) and (max-height: $val2) {
+      @content;
+    }
+  }
+}
+
+@mixin svg-color($val) {
+  svg:not(.custom) {
+    path[fill] {
+      fill: $val;
+    }
+
+    path[stroke] {
+      stroke: $val;
+    }
+
+    circle[stroke] {
+      stroke: $val;
+    }
+  }
+}

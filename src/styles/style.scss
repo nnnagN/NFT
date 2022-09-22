@@ -1,0 +1,144 @@
+@import 'media';
+
+$poppin: 'Poppins';
+$color-text: #4c4d4d;
+$color-text-bold: #252b33;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+html body {
+  height: 100%;
+  color: $color-text;
+  font-family: $poppin;
+  direction: ltr;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  background-color: currentcolor;
+  border-top: none;
+}
+
+.btn {
+  border-radius: 0.25rem;
+}
+
+.modal-content {
+  color: $color-text;
+}
+
+/* ---------------------------------------------------------
+  Splide style
+--------------------------------------------------------- */
+.splide {
+  &:hover {
+    .splide__arrow:not(:disabled) {
+      opacity: 1;
+    }
+  }
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
+}
+
+.splide__arrow {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+  // border: 1px solid $color-5;
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  svg {
+    fill: #333;
+  }
+}
+
+.splide__arrow:disabled {
+  opacity: 0.5;
+}
+
+.splide__arrow:hover:not(:disabled) {
+  background: #ccc;
+
+  svg {
+    fill: #fff;
+  }
+}
+
+.splide__arrow--prev {
+  left: -1.6em;
+
+  @include m(max_xxs) {
+    left: -1.4em;
+  }
+}
+
+.splide__arrow--next {
+  right: -1.6em;
+
+  @include m(max_xxs) {
+    right: -1.4em;
+  }
+}
+
+.splide__pagination {
+  bottom: -3em;
+
+  li {
+    button {
+      width: 11px;
+      height: 11px;
+      margin: 7px;
+      background: transparent;
+      border: 2px solid rgb(0 0 0 / 20%);
+
+      &.is-active {
+        background: rgb(0 0 0 / 20%);
+        border: none;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------
+  Tippy style
+--------------------------------------------------------- */
+.tippy-box {
+  font-size: 0.75rem;
+  background-color: rgb(0 0 0 / 88%);
+  border-radius: 8px;
+
+  .tippy-arrow {
+    color: #000;
+  }
+
+  &[data-placement^='top'] {
+    .tippy-arrow {
+      &::before {
+        bottom: -6px;
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------
+
+--------------------------------------------------------- */

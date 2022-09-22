@@ -32,7 +32,7 @@ const Header: React.FC<Props> = () => {
       <nav className="primary-menu navbar navbar-expand-lg fw-600 sticky-on">
         <div className="container-lg">
           <Link href="/">
-            <a><Image src="public/logo.png" className="header-logo" width={125} height={35} /></a>
+            <a><Image src="/images/logo.svg" className="header-logo" width={125} height={35} /></a>
           </Link>
 
           <button type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" className="navbar-toggler collapsed" aria-expanded="false">
