@@ -8,7 +8,7 @@ import '../styles/style.scss';
 import type { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import Head from 'next/head';
-import {Layout} from '@containers/Layout';
+import Layout from '../containers/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
 

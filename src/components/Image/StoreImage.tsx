@@ -1,5 +1,5 @@
-import Image from '@components/Image';
-import { MOBILE_STORE_TYPE } from '@constants';
+import Image from '../../components/Image';
+import { MOBILE_STORE_TYPE } from '../../utils/constants';
 
 type Props = {
   store: MOBILE_STORE_TYPE

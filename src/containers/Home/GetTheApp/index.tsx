@@ -1,5 +1,5 @@
-import StoreImage from '@components/Image/StoreImage';
-import { APP_STORE, GOOGLE_PLAY } from '@constants';
+import StoreImage from '../../../components/Image/StoreImage';
+import { APP_STORE, GOOGLE_PLAY } from '../../../utils/constants';
 
 type Props = {
 

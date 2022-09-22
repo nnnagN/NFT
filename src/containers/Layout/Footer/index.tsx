@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Tippy from '@tippyjs/react';
-import Terms from '@components/Modal/Terms';
-import Privacy from '@components/Modal/Privacy';
+import Terms from '../../../components/Modal/Terms';
+import Privacy from '../../../components/Modal/Privacy';
 import Link from 'next/link';
 
 type Props = {

@@ -1,4 +1,4 @@
-import BackToTop from '@components/Button/BackToTop';
+import BackToTop from '../../components/Button/BackToTop';
 import Footer from './Footer';
 import Header from './Header';
 import styles from './index.module.scss';
