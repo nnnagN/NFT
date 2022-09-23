@@ -1,0 +1,95 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-rational-order"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin",
+    "stylelint-no-unsupported-browser-features",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "browsers": [
+          "> 1%",
+          "Last 2 versions",
+          "Firefox ESR",
+          "not dead",
+          "not IE 11",
+          "not Baidu 7.12",
+          "not op_mini all"
+        ],
+        "severity": "warning",
+        "ignore": ["user-select-none"]      
+      }
+    ],
+    "order/properties-alphabetical-order": null,
+    "order/properties-order": [
+      [],
+      {
+        "severity": "warning"
+      }
+    ],
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": false
+      }
+    ],
+    "function-url-quotes": null,
+    "value-no-vendor-prefix": null,
+    "declaration-property-value-disallowed-list": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "media-feature-name-no-vendor-prefix": null,
+    "at-rule-no-vendor-prefix": null,
+    "property-no-vendor-prefix": null,
+    "no-descending-specificity": null,
+    "selector-class-pattern": null,
+    "selector-no-vendor-prefix": null,
+    "selector-no-qualifying-type": null,
+    "selector-max-compound-selectors": null,
+    "selector-max-id": null,
+    "color-named": null,
+    "indentation": 2,
+    "no-empty-first-line": true,
+    "max-empty-lines": 1,
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "stylelint-commands"
+        ]
+      }
+    ],
+    "scss/double-slash-comment-empty-line-before": [
+      "always",
+      {"ignore": ["between-comments", "stylelint-commands", "inside-block"]}
+    ],
+    "scss/double-slash-comment-whitespace-inside": [
+      "always",
+      {"severity": "warning"}
+    ],
+    "scss/comment-no-empty": [
+      true,
+      {"severity": "warning"}
+    ],
+    "max-nesting-depth": null,
+    "number-max-precision": null,
+    "color-hex-case": "lower",
+    "font-family-name-quotes": "always-unless-keyword",
+    "scss/dollar-variable-empty-line-before": null,
+    "selector-pseudo-class-no-unknown" : [
+      true, {"ignorePseudoClasses": ["global"]}
+    ]
+  }
+}
