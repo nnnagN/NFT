@@ -12,10 +12,9 @@ const Header: React.FC<Props> = () => {
   const listMenu = [
     {name: 'Home', link: '/#home'},
     {name: 'About', link: '/#about'},
-    {name: 'Features', link: '/#features'},
-    {name: 'Screenshot', link: '/#screenshot'},
-    {name: 'Testimonial', link: '/#testimonial'},
-    {name: 'Pricing', link: '/#pricing'},
+    {name: 'Hot Colletion', link: '/#features'},
+    {name: 'Art Graphics', link: '/#screenshot'},
+    {name: 'Make NFT', link: '/#testimonial'},
     {name: 'Faq', link: '/#faq'},
     {name: 'Contact Us', link: '/#contact'},
   ];
@@ -32,7 +31,7 @@ const Header: React.FC<Props> = () => {
       <nav className="primary-menu navbar navbar-expand-lg fw-600 sticky-on">
         <div className="container-lg">
           <Link href="/">
-            <a><Image src="/images/logo.svg" className="header-logo" width={125} height={35} /></a>
+            <a><Image src="/../../../../images/logo" className="header-logo" width={125} height={35} /></a>
           </Link>
 
           <button type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" className="navbar-toggler collapsed" aria-expanded="false">
